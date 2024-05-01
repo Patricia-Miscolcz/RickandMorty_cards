@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    position: relative; /* Necessário para o posicionamento absoluto do pseudo-elemento */
+}
+
+html::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+    background-image: url('./imgs/dope-rick-and-morty.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/*nome superior esquerdo*/
+#RickandMorty{
+    margin-left: 50px;
+    margin-bottom: 2px;
+    margin-top: 43px;
+    color: black;
+    font-family: 'Bangers';
+    font-weight: 100;
+    letter-spacing: 6px;
+    font-size: 1.8rem;
+}
+
+/*armazena Home/Sobre/Contato*/
+ul{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    gap: 95px;
+    margin: auto;
+    margin-right: 40px;
+    margin-bottom: 25px;
+    margin-top: -45px;
+    font-size: 1.8rem;
+    font-weight: 200;
+    font-family: 'Bangers';
+}
+
+.home{
+    border: 3px solid #2571f4;
+    padding: 10px;
+    border-radius: 7px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.error-message{
+    border: 2px solid #ff6f61;
+    border-radius: 15px;
+    background-color: #ffcdc1;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ff6f61;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 34px;
+    box-shadow: 0 5px 30px rgb(0 0 0 /0.8);
+    padding: 4px;
+    animation: shake 5s ease-in-out, pulse 1.5s infinite alternate; /* Adicionando outra animação */
+    max-width: 75%; /* Definindo uma largura máxima para a mensagem de erro */
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 5px;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-15px); }
+    50% { transform: translateX(15px); }
+    75% { transform: translateX(-13px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/*armazena input e botao pesquisar*/
+form{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    margin-right: 40px;
+    margin-top: 15px;
+    width: 370px;
+}
+
+/*input*/
+.pesquisa{
+    width: 60%;
+    height: 25px;
+    margin-right: 1px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 0.7em;
+    font-style: italic;
+    font-weight: bold;
+    opacity: 0.8;
+    position: relative;
+    display: flex;
+    color: black;
+    background-color:rgb(153, 196, 218);
+}
+
+/*botões*/
+button{
+    background: #0ba9f1;
+    color: white; /*cor da letra*/
+    padding: 1px 1px;
+    border: none;
+    border-radius: 4px;
+    width: 100px;
+    height: 25px;
+    cursor: pointer; /*mãozinha no efeito do mouse*/
+    margin-top: 2px;
+    margin-right: 9px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: #2571f4;
+}
+
+#characterId{ /*caixa para usuario digitar*/
+    width: 45px;
+    height:22px;
+    border-radius: 4px;
+    background-color:rgb(153, 196, 218);
+    padding: 3px 3px;
+    color: black;
+    margin-left: 8px;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2em;
+    border: 2px solid rgb(4, 35, 97);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*ação de passar o mouse por cima*/
+#characterId:hover{
+    background: rgb(0, 104, 168);
+    color: black;
+    transition: 0.3s all; /* tornar mais suave o tempo de passar o mouse*/
+    border: 2px solid rgb(4, 35, 97);
+}
+   
+/*todas as labels*/
+.label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+/*nome Busca de personagem e Informações*/
+h2{
+    margin-top: 15px;
+    margin-left: 50px;
+    font-family: 'Bangers';
+    width: 280px;
+    height: 40px;
+    font-size: 2rem;
+    font-weight: 100;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+/*caixa que armazena o titulo superior e home/sobre/contato */
+header{
+    margin-top: 10px;
+    height: 120px;
+}
+
+a{
+    text-decoration: none; /*tira o traço de baixo*/
+    color: inherit; /*tira a cor padrão de navegação*/
+}
+    
+li{
+    list-style-type: none; /*tira as bolinhas*/
+}
+
+.image, img{
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 3px;
+    margin-top: 15px;
+}
+
+
+/*caixa que recebe todos os cards dos personagens*/
+#content{
+    color: black;
+    font-weight: bold;
+    font-size: .7em;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 7px;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
+/*card estático*/
+.resultstyle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px rgb(0 0 0 /0.8);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*background-color: rgb(0, 104, 168);*/
+    border: 1px solid rgba(255, 255, 255, 0.311);
+    background-color: #7cbeb32f;
+    backdrop-filter: blur(2px);
+    border-radius: 1rem;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+footer{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: black;
+    color: white;
+    line-height: 1.7;
+    max-height: 100%;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.recado{
+    color: red;
+}
+
+/*opções clicáveis pelo usuário*/
+.checkbox{
+    color: black;
+    width: 680px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+label{
+    flex-direction: row;
+    font-weight: bold; /* Deixa o texto da label em negrito */
+    color: black; /* Altera a cor do texto da label */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin-left: 1px;
+}
+
+/*funciona*/
+input[type="checkbox"] {
+    /* estilos para o quadradinho do checkbox */
+    width: 21px; 
+    height: 21px; 
+    border: 1px solid black; /* borda do quadradinho */
+    border-radius: 3px;
+    margin-right: 1px; /* espaçamento entre o quadradinho e o texto */
+    cursor: pointer; /* cursor do mouse como ponteiro */
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%;
+    height: 250px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px rgb(0 0 0 /0.9);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*background-color: rgb(0, 104, 168);
+    border: 1px solid black;*/
+    border: 1px solid rgba(255, 255, 255, 0.311);
+    background-color: #7cbeb32f;
+    backdrop-filter: blur(2px);
+    border-radius: 1rem;
+    font-size: .7rem;
+}
+
+/*espaço que receberá todos os cards*/
+.caixa{
+    /*background-color: rgb(153, 196, 218);*/
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 10px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer type="module"></script>
+</head>
+
+<body>
+
+      <header>
+        <div id="RickandMorty">
+            <h1>Rick and Morty</h1>
+        </div>
+        <ul>
+            <a class="home" href="#"><li>Home</li></a>
+            <a href="#"><li>Sobre</li></a>
+            <a href="#"><li>Contato</li></a>
+        </ul>
+    </header>
+
+
+
+<form action="" method="get">
+
+    <form class="pesquisa">
+        <input type="text" name="pesquisa" class="pesquisa" id="pesquisa" placeholder="Digite o nome do personagem"/>
+        <button id="btn-pesquisa">Pesquisar</button>
+    </form>  
+
+    <h2>Busca de personagem:</h2>
+    <br>
+    <label class="label" for="characterId">ID da personagem:</label>
+    <input type="number" name="characterId" id="characterId">
+    
+    <br>
+   
+    
+    <h2>Informações:</h2>
+    <br><br>
+    
+    <div class="checkbox">
+    <input type="checkbox" name="name" id="name">
+    <label for="name">Nome</label>
+
+    <input type="checkbox" name="status" id="status">
+    <label for="status">Status</label>
+
+    <input type="checkbox" name="species" id="species">
+    <label for="species">Especies</label>
+        
+    <input type="checkbox" name="gender" id="gender">
+    <label for="gender">Genero</label>
+    
+    
+    <input type="checkbox" name="origin" id="origin">
+    <label for="origin">Origem</label>
+
+    <input type="checkbox" name="episode" id="episode">
+    <label for="episode">Episodios</label>
+    </div>
+    
+    <br>
+    
+
+    <button type="submit" id="btn-go">Pesquisar</button>
+    <button type="reset" id="btn-reset">Limpar</button>
+
+</form>
+
+<div class="card" id="resultstyle">
+
+   <div id="content"></div>
+
+</div>
+
+
+<footer class="copyright">
+    &copy; 2024
+    <h5>🚀🚀🚀by Patricia Miscolcz e Carla Ramos🚀🚀🚀</h5> 
+    <h5>Todos os direitos reservados.</h5>
+    <h5 class="recado">Plágio é crime. Respeite os direitos autorais e a propriedade intelectual.</h5>
+</footer>
+
+
+</body>
+</html>
